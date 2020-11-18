@@ -1,0 +1,46 @@
+<div class="nuevo-content centrado">
+       <h3>Libro</h3>
+       <a routerLink="/admin" class="btn" id="btnCrud2">Regresar</a>
+
+       <form (ngSubmit)="guardar( f )" #f="ngForm">
+
+              <label>Firebase ID</label>
+              <input type="text" disabled="disabled" placeholder="firebaseID" name="id" [(ngModel)]="libro.id">
+              <span>Este campo es autogenerado</span>
+
+              <label>Nombre</label>
+              <input type="text" required name="nombre" [(ngModel)]="libro.nombre">
+              <span *ngIf="f.submitted && f.controls['nombre'].errors">Nombre requerido</span>
+
+              <label>Autor</label>
+              <input type="text" name="autor" [(ngModel)]="libro.autor" required>
+              <span *ngIf="f.submitted && f.controls['autor'].errors">Autor requerido</span>
+
+              <!-- <label>Imagen</label>
+              <input type="text" name="urlImg" [(ngModel)]="libro.urlImg" [value]="uploadURL | async" 
+                     placeholder="URL img">
+              <span>Este campo es autogenerado</span>
+              <br> -->
+
+              <label>Imagen</label>
+              <input type="text" name="urlImg" [(ngModel)]="libro.urlImg" 
+                     placeholder="URL img" required disabled="disabled">
+              <span>Este campo es autogenerado</span>
+              <br>
+
+              <label>IndexImg</label>
+              <input type="text" name="indexImg" [(ngModel)]="libro.indexImg" 
+                     placeholder="URL img" required disabled="disabled">
+              <span>Este campo es autogenerado</span>
+              <br>
+
+              <input type="submit" id="btnSaveNuevo" value="Guardar">
+
+       </form>
+
+
+       <input #inputFile class="hidden" type="file" (change)="upload($event)" accept="image/*">
+       <button mat-raised-button color="primary" (click)="inputFile.click()">Subir Imagen</button>
+       <h4>Proceso: {{ (procesoSubidaImg | async) / 100 | percent }}</h4>
+
+</div>

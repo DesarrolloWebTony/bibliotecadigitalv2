@@ -1,0 +1,7 @@
+<div class="libros-content centrado">
+    <div class="libro" *ngFor="let libro of libros">
+        <!-- <h3>{{ libro.nombre }}</h3> -->
+        <img [src]="libro.urlImg">
+        <p>{{ libro.autor }}</p>
+    </div>
+</div>

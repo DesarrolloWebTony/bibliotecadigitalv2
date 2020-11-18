@@ -1,0 +1,614 @@
+/* You can add global styles to this file, and also import other style files */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.centrado{
+    width: 90%;
+    margin: auto;
+}
+
+.titulo{
+    text-align: center;
+    font-size: 40px;
+    padding: 48px 0;
+    color: #47060e;
+}
+
+.parrafo{
+    line-height: 24px;
+    word-spacing: 2px;
+    letter-spacing: 1.6px;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 10vh;
+}
+
+nav li {
+    list-style: none;
+    display: inline-block;
+    margin-right: 24px;
+}
+
+nav a{
+    /* color: #47060e; */
+    color: #000;
+    text-decoration: none;
+}
+
+
+/* =====>  home component  <===== */
+
+
+.hero{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+    background: linear-gradient(to right, rgba(169,3,41,0.2) 0%, rgba(143,2,34,0.35) 44%, rgba(109,0,25,0.35) 100%), url("assets/inauguracion3.jpg");
+    /* background: url("assets/inauguracion3.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* background-position: bottom; */
+    background-position: center;
+    color: #fff;
+}
+
+.hero h1{
+    font-size: 48px;
+}
+
+.hero p{
+    padding: 32px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    width: 160px;
+    height: 35px;
+    border-radius: 6px;
+    background: rgb(214, 176, 3);
+    /* background: #47060e; */
+    color: #000;
+}
+
+.btn:hover{
+    background: rgb(116, 97, 2);
+    color: #fff;
+}
+
+.hero i{
+    position: absolute;
+    color: #fff;
+    font-size: 48px;
+    bottom: 32px;
+}
+
+section{
+    height: 100vh;
+}
+
+#section1{
+    background: url("assets/footer.png");
+    background-position: center;
+    background-size: cover;
+}
+
+#section2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    /* background: #47060e; */
+    background: linear-gradient(to left, rgb(173, 4, 44) 0%, rgba(143,2,34,1) 32%, rgba(71,6,14,1) 100%);
+}
+
+.card-img{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-img img{
+    width: 55%;
+    border-radius: 6px; 
+}
+
+.card-textos{
+    flex-basis: 50%;
+}
+
+.card-textos h2 {
+    text-align: center;
+    margin: 40px 0px;
+    color: #fff;
+}
+
+.card-textos p{
+    line-height: 24px;
+    word-spacing: 2px;
+    letter-spacing: 1.4px;
+    padding: 0px 24px;
+    color: #fff;
+}
+
+
+
+/* =====>  cursos component  <===== */
+
+
+.slide{
+    width: 70%;
+    margin: auto;
+    display: flex;
+    background: rgb(0, 0, 0, 0.7);
+}
+
+.control{
+    flex-basis: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.control i{
+    color: #fff;
+    font-size: 24px;
+    padding: 16px 0;
+    cursor: pointer;
+}
+
+.slide-img{
+    flex-basis: 90%;
+}
+
+.slide-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.box-cursos{
+    width: 100%;
+    margin-top: 64px;
+    height: 180px;
+    background: linear-gradient(to left, rgb(173, 4, 44) 0%, rgba(143,2,34,1) 32%, rgba(71,6,14,1) 100%);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.box-cursos div{
+    width: 20%;
+    height: 90%;
+    /* border: 1px solid white; */
+    color: white;
+    text-align: center;
+}
+
+.box-cursos i{
+    font-size: 32px;
+    margin: 8px 0px;
+}
+
+.box-cursos p{
+    margin-top: 16px;
+}
+
+.curso{
+    width: 90%;
+    display: flex;
+    margin: 64px auto;
+    /* background: #cecbcb; */
+}
+
+.curso-descrip{
+    flex-basis: 55%;
+}
+
+.curso-descrip h2{
+    color: #47060e;
+    font-size: 32px;
+}
+
+.curso-descrip p{
+    color: #141414;
+    font-size: 14px;
+    margin: 24px 0px;
+}
+
+.curso-img{
+     flex-basis: 45%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+}
+
+.curso-img img{
+    width: 80%;
+    /* height: 80%; */
+    border-radius: 8px;
+}
+
+
+/* =====>  acerca de component  <===== */
+
+
+.instalaciones-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    /* background: rgb(224, 191, 191); */
+}
+
+.instalaciones-card{
+    border: 1px solid rgb(231, 228, 228);
+    height: 380px;
+    width: 320px;
+    margin: 24px 8px;
+    box-shadow: 3px 4px 5px 0px rgba(214, 207, 207);
+}
+
+.instalaciones-card img{
+    width: 280px;
+    height: 50%;
+    display: block;
+    margin: 16px auto;
+    border-radius: 6px;
+}
+
+.instalaciones-card h3{
+    text-align: center;
+}
+
+.instalaciones-card p{
+    margin: 16px 16px;
+}
+
+
+
+
+/* =====>  login component  <===== */
+
+.libros-content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.libro{
+    width: 200px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* border: 1px solid black; */
+    margin: 24px 8px;
+    cursor: pointer;
+}
+
+.libro:hover{
+    transform: scale(1.1);
+}
+
+.libro h3{
+    font-size: 14px;
+}
+
+.libro p{
+    font-size: 12px;
+    margin: 16px 0px;
+}
+
+.libros-content img{
+    height: 70%;
+    width: 70%;
+    margin: 4px auto;
+    border-radius: 3px;
+}
+
+
+
+
+
+
+/* =====>  login component  <===== */
+
+.login-content{
+    display: flex;
+    height: 90%;
+    width: 90%;
+    /* border: 1px solid black; */
+    margin: 32px auto;
+    /* flex-direction: column; */
+}
+
+.login-left{
+    flex-basis: 50%;
+}
+
+.login-left img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.login-right{
+    flex-basis: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background: rgb(236, 232, 232); esta bueno el color */
+    background: rgb(209, 202, 202);
+    border-radius: 6px;
+}
+
+.login-right h3{
+    text-align: center;
+    margin: 24px 0px;
+}
+
+.login-right form{
+    width: 80%;
+    height: 60%;
+    margin: 24px auto;
+    /* box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75); */
+}
+
+form input[type="password"],
+form input[type="email"],
+form input[type="text"]{
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background: none;
+    border-bottom: 1px solid gray;
+}
+
+.hidden{
+    display: none;
+}
+
+form input[type="submit"]{
+    display: block;
+    width: 200px;
+    height: 40px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 6px;
+    background: #47060e;
+    cursor: pointer;
+    color: white;
+}
+
+.login-right span{
+    display: block;
+    font-size: 12px;
+    color: red;
+    margin: 5px 0px;
+}
+
+.login-right label{
+    display: inline-block;
+    margin: 8px 0px;
+}
+
+.login-right p{
+    margin: 32px;
+}
+
+
+
+/* =====>  crud component  <===== */
+
+.content-crud h3{
+    color: #47060e;
+    font-size: 40px;
+    margin: 24px 0px;
+}
+
+/* .margen{
+    margin-bottom: 24px;
+    background: #47060e;
+    width: 200px;
+    height: 30px;
+    position: absolute;
+} */
+
+#btnCrud, #btnCrud2{
+    float: right;
+    margin-right: 48px;
+    margin-bottom: 24px;
+}
+
+.tabla-content{
+    width: 90%;
+    /* background: gray; */
+}
+
+.content-crud table{
+    overflow-x: auto;
+    margin:50px 0px;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.content-crud table thead tr{
+    background: #47060e;
+    color: #fff;
+    /* text-align: left; */
+    font-weight: bold;
+}
+
+.content-crud th,
+.content-crud td{
+    padding: 16px 0px;
+}
+
+.content-crud table th{
+    margin-top: 20px;
+}
+
+.content-crud table td{
+    text-align: center;
+}
+
+.content-crud img{
+    height: 200px;
+    width: 110px;
+    border-radius: 6px;
+}
+
+.tools i{
+    font-size: 32px;
+    margin: 0px 4px;
+    cursor: pointer;
+}
+
+.tools a, i{
+    color: #47060e;
+}
+
+
+/* =====>  nuevolibro component  <===== */
+
+.nuevo-content{
+    position: relative;
+    margin-bottom: 48px;
+}
+
+#btnSaveNuevo{
+    position: absolute;
+    right: 0;
+    margin-right: 48px;
+}
+
+.nuevo-content h3{
+    color: #47060e;
+    font-size: 40px;
+    margin: 24px 0px;
+}
+
+/* .nuevo-content p{
+    margin: 48px 0px;
+} */
+
+.nuevo-content form{
+    width: 60%;
+    height: 60%;
+    margin: 24px 0px;
+    /* box-shadow: 0px 0px 22px 0px rgba(0,0,0,0.75); */
+}
+
+.nuevo-content label{
+    display: inline-block;
+    margin: 8px 0px;
+}
+
+.nuevo-content span{
+    display: block;
+    font-size: 12px;
+    color: red;
+    margin: 5px 0px;
+}
+
+
+/* =====>  footer component  <===== */
+
+footer{
+    position: relative;
+    width: 100%;
+    height: 500px;
+    background: #47060e;
+    color: #fff;
+}
+
+.footer{
+    height: 75%;
+    display: flex;
+    border: 1px solid yellow;
+}
+
+.footer-left{
+    flex-basis: 50%;
+    text-align: center;
+    padding: 40px;
+}
+
+.footer-right{
+    flex-basis: 50%;
+    /* padding: 40px; */
+}
+
+.footer-right h2{
+    margin: 24px 0px;
+    font-size: 32px;
+}
+
+.footer-right p{
+    margin-bottom: 24px;
+}
+
+.contact-box{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    font-size: 40px;
+    /* height: 150px; */
+}
+
+.contact-box i{
+    margin: 0px 8px;
+}
+
+.footer-menu{
+    text-align: center;
+}
+
+.footer-menu li{
+    display: inline-block;
+    list-style: none;
+    padding: 8px;
+}
+
+.footer-menu a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+}
+
+.copy{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 35px;
+    font-size: 12px;
+    background: rgba(0, 0, 0, 0.5);
+}

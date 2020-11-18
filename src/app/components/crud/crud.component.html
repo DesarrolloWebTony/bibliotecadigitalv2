@@ -1,0 +1,29 @@
+<div class="content-crud centrado">
+    <h3>Libros registrados</h3>
+    <div class="margen">
+        <a routerLink="/nuevolibro" class="btn" id="btnCrud">Agregar</a>
+    </div>
+    <div class="tabla-content centrado">
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Nombre</th>
+                    <th>Imagen</th>
+                    <th>Tools</th>
+                </tr>
+            </thead>
+            <tr *ngFor="let libro of libros; let i = index">
+                <td>{{ i+1 }}</td>
+                <td>{{ libro.nombre }}</td>
+                <td><img [src]="libro.urlImg" alt=""></td>
+                <td>
+                    <div class="tools">
+                        <i class='bx bxs-trash' (click)="borrarLibro( libro, i )"></i>
+                        <a routerLink='/nuevolibro'><i class='bx bxs-edit'></i></a>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
